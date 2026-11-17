@@ -1,4 +1,4 @@
-import { site } from '../content';
+import { contact, site } from '../content';
 import Icon from './Icon';
 
 export default function Hero() {
@@ -20,6 +20,11 @@ export default function Hero() {
           <a href="#contact" className="btn btn--lg">
             Say hi <Icon name="arrow" />
           </a>
+          {contact.coffee && (
+            <a href={contact.coffee.href} className="btn btn--coffee btn--lg" target="_blank" rel="noreferrer">
+              <Icon name="coffee" /> Support me
+            </a>
+          )}
         </div>
       </div>
 
