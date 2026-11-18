@@ -179,7 +179,11 @@ main {
 .hero-title {
   margin-top: 6px;
   margin-left: -0.04em;
-  font-size: clamp(2.3rem, 7.1vw, 6.6rem);
+  /* Capped so the 7 wide letters always fit the copy column; max-content keeps the
+     chrome background (clipped to the box) under every letter. */
+  font-size: clamp(2.3rem, 6.2vw, 5.6rem);
+  width: max-content;
+  max-width: 100%;
   line-height: 0.95;
   letter-spacing: -0.01em;
   -webkit-box-reflect: below -0.12em linear-gradient(transparent 62%, rgba(255, 255, 255, 0.28));
